@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\Delay;..\Driver\MPU6050;..\Driver\LED;..\Driver\Usart;..\Driver\KEY;..\Driver\DMA</IncludePath>
+              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\Delay;..\Driver\MPU6050;..\Driver\LED;..\Driver\DMA;..\Driver\Usart;..\Driver\KEY</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
