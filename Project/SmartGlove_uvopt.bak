@@ -666,7 +666,11 @@
       <Focus>0</Focus>
       <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
+<<<<<<< HEAD
       <TopLine>33</TopLine>
+=======
+      <TopLine>29</TopLine>
+>>>>>>> refs/remotes/origin/master
       <CurrentLine>45</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\stm32f10x_it.c</PathWithFileName>
@@ -712,7 +716,11 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
+<<<<<<< HEAD
       <ColumnNumber>22</ColumnNumber>
+=======
+      <ColumnNumber>2</ColumnNumber>
+>>>>>>> refs/remotes/origin/master
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>22</TopLine>
       <CurrentLine>23</CurrentLine>
