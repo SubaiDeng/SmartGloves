@@ -1,4 +1,5 @@
 --cpu Cortex-M3
+"..\output\bps_usart.o"
 "..\output\misc.o"
 "..\output\stm32f10x_adc.o"
 "..\output\stm32f10x_bkp.o"

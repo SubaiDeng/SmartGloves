@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS</IncludePath>
+              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\Usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -404,6 +404,13 @@
       <Groups>
         <Group>
           <GroupName>Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>bps_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\Usart\bps_usart.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Library</GroupName>
