@@ -170,7 +170,7 @@
             <Capability>1</Capability>
             <DriverSelection>4099</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
+          <bUseTDR>1</bUseTDR>
           <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
@@ -362,8 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\MPU6050;..\Driver\LED;..\Driver\Usart</IncludePath>
-
+              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\Delay;..\Driver\MPU6050;..\Driver\LED;..\Driver\Usart;..\Driver\KEY</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -430,6 +429,16 @@
               <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\Usart\bsp_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\KEY\key.c</FilePath>
+            </File>
+            <File>
+              <FileName>delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\Delay\delay.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,5 +1,5 @@
 /***************************************************************************************
- *	FileName					:	MPU6050.c
+ *	FileName					:	KEY.h
  *	CopyRight					:	Zoisite
  *	ModuleName					:	MPU6050
  *
@@ -10,38 +10,36 @@
  *	Author/Corportation			:	Zoisite
  *
  *	Abstract Description		:	declare some prototypes, structs, include files 
- *									and define macro for MPU6050
+ *									and define macro for KEY
  *
  *--------------------------------Revision History--------------------------------------
  *	No	version		Date			Revised By			Item			Description
- *		1			2016/5/10		maple2snow			SmartGlove		Create this file
+ *		1			2016/5/10		maple				SmartGlove		Create this file
  *
  ***************************************************************************************/
 /**************************************************************
 *        Multi-Include-Prevent Section
 **************************************************************/
-#ifndef _MPU6050_H
-#define _MPU6050_H
+#ifndef _KEY_H
+#define _KEY_H
 
 /**************************************************************
 *        Debug switch Section
 **************************************************************/
 
-
 /**************************************************************
 *        Include File Section
 **************************************************************/
-#include "math.h"
 #include "stm32f10x.h"
+#include "delay.h"
 
 /**************************************************************
 *        Macro Define Section
 **************************************************************/
-#define PI 3.1415926
-#define Square(x) ((x) * (x))
-#define IS_MPU_RUNNING (MPU_Data[0] == 0x55)
-#define FILTER 300.0
-#define PROPOTION 15.0
+#define LEFT_KEY GPIO_Pin_2
+#define RIGHT_KEY GPIO_Pin_0
+#define IS_LEFT_KEY_DOWN GPIO_ReadInputDataBit(GPIOC, LEFT_KEY)		//判断左键是否被按下
+#define IS_RIGHT_KEY_DOWN GPIO_ReadInputDataBit(GPIOC, RIGHT_KEY)	//判断右键是否被按下
 
 /**************************************************************
 *        Struct Define Section
@@ -50,60 +48,21 @@
 /**************************************************************
 *        Global Value Declare Section
 **************************************************************/
-extern u8 MPU_Data [33];	//存储MPU6050数据
-
-extern float Axis[3];		//三个轴的加速度
-extern float Angle[3];		//三个轴的角度
-extern float Angular[3];	//三个轴的角速度
-extern char XShift;			//X轴位移
-extern char YShift;			//Y轴位移
-
+extern u8 leftKey;	//判断左键是否被按下，1为按下，0为否
+extern u8 rightKey;	//判断右键是否被按下，1为按下，0为否
 /**************************************************************
 *        Prototype Declare Section
 **************************************************************/
-
 /**
- * @brief  获得三个方向轴的角度
- * @param  
+ * @brief  初始化鼠标按键
  * @retval None
  */
-void Angle_DataTransfrom(void);
+void KEY_Init(void);
 
 /**
- * @brief  得出三个方向轴的角速度
- * @param  
+ * @brief  扫描鼠标左右按键是否按下
  * @retval None
  */
-void Angular_DataTransFrom(void);
+void ScanKey(void);
 
-/**
- * @brief  得出三个方向轴的加速度
- * @param  
- * @retval None
- */
-void Axis_DataTransfrom(void);
-
-/**
- * @brief  处理获得的加速度，去除基准值
- * @param  
- * @retval None
- */
-void Axis_GetFinalData(void);
-
-/**
- * @brief  		处理旋转后加速度的消除平衡问题
- * @param  		void
- */
-void DealWithRotation(void);
-
-/**
- * @brief  		通过角速度来得出位移
- * @param  		void
- */
-void GetShiftValues(void);
-/**************************************************************
-*        End-Multi-Include-Prevent Section
-**************************************************************/
 #endif
-
-

@@ -1,7 +1,7 @@
 /***************************************************************************************
- *	FileName					:	main.c
+ *	FileName					:	key.c
  *	CopyRight					:	Zoisite
- *	ModuleName					:	main
+ *	ModuleName					:	key
  *
  *	CPU							:	stm32f107vc
  *	RTOS						:
@@ -9,68 +9,62 @@
  *	Create Date					:	2016/5/10
  *	Author/Corportation			:	Zoisite
  *
- *	Abstract Description		:	main operation
+ *	Abstract Description		:	a series of operations for key
  *
  *--------------------------------Revision History--------------------------------------
  *	No	version		Date			Revised By			Item			Description
- *		
+ *		1			2016/5/10		maple				Smartglove		create this file
  *
  ***************************************************************************************/
  
 /**************************************************************
 *	Include File Section
 **************************************************************/
-#include "stm32f10x.h"
-#include "MPU6050.h"
-#include "led.h"
-#include "bsp_usart.h"
-#include "delay.h"
 #include "key.h"
+
+/**************************************************************
+*	Debug switch Section
+**************************************************************/
 
 /**************************************************************
 *        Global Value Define Section
 **************************************************************/
-
-/**************************************************************
-*        Prototype Declare Section
-**************************************************************/
-/**
- * @brief  		打包鼠标数据给串口
- * @param  		char *data:存储待发送数据
- * @retval 		void
- */
-void PackDatasForBlueTooth(char *data);
+u8 leftKey;	//判断左键是否被按下，1为按下，0为否
+u8 rightKey;//判断右键是否被按下，1为按下，0为否
 
 /**************************************************************
 *	Function Define Section
 **************************************************************/
-int main(void)
+/**
+ * @brief  初始化鼠标按键
+ * @retval None
+ */
+void KEY_Init(void)
 {
-	SysTick_Config(SystemCoreClock/1000);  //1ms中断一次
-	LED_Init();
-	USART1_Config();//串口初始化
-	KEY_Init();
-	
-	while(1)
-	{
-		ScanKey();
-		
-		//DelayMs(1500);
-	}
+	GPIO_InitTypeDef GPIO_InitStructure;
+
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+	GPIO_InitStructure.GPIO_Pin = LEFT_KEY | RIGHT_KEY;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;	//按键下拉输入
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
 /**
- * @brief  		打包鼠标数据给串口
- * @param  		char *data:存储待发送数据
- * @retval 		void
+ * @brief  扫描鼠标左右按键是否按下
+ * @retval None
  */
-void PackDatasForBlueTooth(char *data)
+void ScanKey(void)
 {
-	*data++ = 'a';
-	*data++ = 'a';
-	*data++ = XShift;
-	*data++ = YShift;
-	*data++ = leftKey;
-	*data   = rightKey;
+	if(IS_LEFT_KEY_DOWN)
+	{
+		DelayMs(5);
+		leftKey = ((IS_LEFT_KEY_DOWN == RESET) ? 0 : 1);
+	}
+	
+	if(IS_RIGHT_KEY_DOWN)
+	{
+		DelayMs(5);
+		rightKey = ((IS_RIGHT_KEY_DOWN == RESET) ? 0 : 1);
+	}
 }
-

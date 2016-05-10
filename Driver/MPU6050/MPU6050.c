@@ -13,7 +13,7 @@
  *
  *--------------------------------Revision History--------------------------------------
  *	No	version		Date			Revised By			Item			Description
- *		
+ *		1			2016/5/10		maple								create this file
  *
  ***************************************************************************************/
  
@@ -34,6 +34,8 @@ float Axis[3];
 float Angle[3];
 float Angular[3];
 float FinalBaseAxis[3];
+char XShift;//X轴位移
+char YShift;//Y轴位移
 
 /**************************************************************
 *	Function Define Section
@@ -197,6 +199,31 @@ void DealWithRotation(void)
 }
 
 /**
- * @brief  		通过角速度来
+ * @brief  		通过角速度来得出位移
  * @param  		void
  */
+void GetShiftValues(void)
+{
+	Angular_DataTransFrom();//获取角速度
+	
+	/*获取Y轴位移*/
+	if(fabs(Axis[0]) < FILTER)//过滤角速度过大的值
+	{
+		YShift = Axis[0] / PROPOTION;//获取Y轴偏移
+	}
+	else
+	{
+		YShift = 0;
+	}
+	
+	/*获取X轴位移*/
+	if(fabs(Axis[2]) < FILTER)//过滤角速度过大的值
+	{
+		XShift = - (Axis[2] / PROPOTION);//获取X轴偏移
+	}
+	else
+	{
+		YShift = 0;
+	}
+}
+

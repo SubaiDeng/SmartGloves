@@ -1,7 +1,7 @@
 /***************************************************************************************
- *	FileName					:	main.c
+ *	FileName					:	delay.h
  *	CopyRight					:	Zoisite
- *	ModuleName					:	main
+ *	ModuleName					:	MPU6050
  *
  *	CPU							:	stm32f107vc
  *	RTOS						:
@@ -9,68 +9,44 @@
  *	Create Date					:	2016/5/10
  *	Author/Corportation			:	Zoisite
  *
- *	Abstract Description		:	main operation
+ *	Abstract Description		:	declare some prototypes, structs, include files 
+ *									and define macro for MPU6050
  *
  *--------------------------------Revision History--------------------------------------
  *	No	version		Date			Revised By			Item			Description
- *		
+ *		1			2016/5/10		maple			SmartGlove		Create this file
  *
  ***************************************************************************************/
- 
 /**************************************************************
-*	Include File Section
+*        Multi-Include-Prevent Section
 **************************************************************/
-#include "stm32f10x.h"
-#include "MPU6050.h"
-#include "led.h"
-#include "bsp_usart.h"
-#include "delay.h"
-#include "key.h"
+#ifndef _DELAY_H
+#define _DELAY_H
 
 /**************************************************************
-*        Global Value Define Section
+*        Debug switch Section
+**************************************************************/
+
+/**************************************************************
+*        Include File Section
+**************************************************************/
+#include "stm32f10x.h"
+
+/**************************************************************
+*        Macro Define Section
+**************************************************************/
+
+/**************************************************************
+*        Struct Define Section
+**************************************************************/
+
+/**************************************************************
+*        Global Value Declare Section
 **************************************************************/
 
 /**************************************************************
 *        Prototype Declare Section
 **************************************************************/
-/**
- * @brief  		打包鼠标数据给串口
- * @param  		char *data:存储待发送数据
- * @retval 		void
- */
-void PackDatasForBlueTooth(char *data);
+void DelayMs(uint32_t nTime);
 
-/**************************************************************
-*	Function Define Section
-**************************************************************/
-int main(void)
-{
-	SysTick_Config(SystemCoreClock/1000);  //1ms中断一次
-	LED_Init();
-	USART1_Config();//串口初始化
-	KEY_Init();
-	
-	while(1)
-	{
-		ScanKey();
-		
-		//DelayMs(1500);
-	}
-}
-
-/**
- * @brief  		打包鼠标数据给串口
- * @param  		char *data:存储待发送数据
- * @retval 		void
- */
-void PackDatasForBlueTooth(char *data)
-{
-	*data++ = 'a';
-	*data++ = 'a';
-	*data++ = XShift;
-	*data++ = YShift;
-	*data++ = leftKey;
-	*data   = rightKey;
-}
-
+#endif

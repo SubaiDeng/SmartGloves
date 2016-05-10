@@ -15,3 +15,5 @@
 ..\output\main.o: ..\Driver\LED\led.h
 ..\output\main.o: ..\Driver\Usart\bsp_usart.h
 ..\output\main.o: G:\mdk474\ARM\ARMCC\bin\..\include\stdio.h
+..\output\main.o: ..\Driver\Delay\delay.h
+..\output\main.o: ..\Driver\KEY\key.h

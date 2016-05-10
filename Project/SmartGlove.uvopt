@@ -75,29 +75,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>255</CpuCode>
-      <Books>
-        <Book>
-          <Number>0</Number>
-          <Title>7</Title>
-          <Path>DATASHTS\ST\STM32F105</Path>
-        </Book>
-        <Book>
-          <Number>1</Number>
-          <Title>Reference Manual</Title>
-          <Path>DATASHTS\ST\STM32F10xxx.PDF</Path>
-        </Book>
-        <Book>
-          <Number>2</Number>
-          <Title>Technical Reference Manual</Title>
-          <Path>datashts\arm\cortex_m3\r1p1\DDI0337E_CORTEX_M3_R1P1_TRM.PDF</Path>
-        </Book>
-        <Book>
-          <Number>3</Number>
-          <Title>Generic User Guide</Title>
-          <Path>datashts\arm\cortex_m3\r2p1\DUI0552A_CORTEX_M3_DGUG.PDF</Path>
-        </Book>
-      </Books>
+      <CpuCode>0</CpuCode>
       <DebugOpt>
         <uSim>0</uSim>
         <uTrg>1</uTrg>
@@ -153,21 +131,33 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>JL2CM3</Key>
-          <Name>-U99999993 -O14 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight JTAG-DP") -D00(3BA00477) -L00(4) -N01("Unknown JTAG device") -D01(06418041) -L01(5) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_CL -FS08000000 -FL040000</Name>
+          <Name>-U308622870 -O14 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight JTAG-DP") -D00(3BA00477) -L00(4) -N01("Unknown JTAG device") -D01(06418041) -L01(5) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_CL -FS08000000 -FL040000</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
           <Key>UL2CM3</Key>
-          <Name>-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_CL -FS08000000 -FL040000)</Name>
+          <Name>UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_CL -FS08000000 -FL040000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>leftKey</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rightKey</ItemText>
+        </Ww>
+      </WatchWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
-        <periodic>1</periodic>
+        <periodic>0</periodic>
         <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
@@ -210,7 +200,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>153</TopLine>
+      <TopLine>148</TopLine>
       <CurrentLine>158</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Library\CMSIS\StartUp\startup_stm32f10x_cl.s</PathWithFileName>
@@ -227,16 +217,15 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
-<<<<<<< HEAD
       <GroupNumber>2</GroupNumber>
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>10</ColumnNumber>
+      <ColumnNumber>17</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>172</TopLine>
-      <CurrentLine>188</CurrentLine>
+      <TopLine>196</TopLine>
+      <CurrentLine>35</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Driver\MPU6050\MPU6050.c</PathWithFileName>
       <FilenameWithoutPath>MPU6050.c</FilenameWithoutPath>
@@ -249,10 +238,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
+      <ColumnNumber>42</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>3</TopLine>
-      <CurrentLine>18</CurrentLine>
+      <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Driver\LED\led.c</PathWithFileName>
       <FilenameWithoutPath>led.c</FilenameWithoutPath>
@@ -267,25 +256,43 @@
       <Focus>0</Focus>
       <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>20</TopLine>
+      <TopLine>21</TopLine>
       <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Driver\Usart\bsp_usart.c</PathWithFileName>
       <FilenameWithoutPath>bsp_usart.c</FilenameWithoutPath>
-=======
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>1</FileNumber>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>46</TopLine>
-      <CurrentLine>68</CurrentLine>
+      <TopLine>40</TopLine>
+      <CurrentLine>33</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Driver\Usart\bps_usart.c</PathWithFileName>
-      <FilenameWithoutPath>bps_usart.c</FilenameWithoutPath>
->>>>>>> refs/remotes/origin/master
+      <PathWithFileName>..\Driver\KEY\key.c</PathWithFileName>
+      <FilenameWithoutPath>key.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>6</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>22</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\Driver\Delay\delay.c</PathWithFileName>
+      <FilenameWithoutPath>delay.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -293,18 +300,13 @@
 
   <Group>
     <GroupName>Library</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>5</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>2</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -319,13 +321,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>6</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>3</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -340,13 +337,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>7</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>4</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -361,13 +353,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>8</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>5</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -382,13 +369,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>9</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>6</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -403,13 +385,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>10</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>7</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -424,13 +401,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>11</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>8</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -445,13 +417,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>12</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>9</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -466,13 +433,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>13</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>10</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -487,13 +449,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>14</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>11</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>16</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -508,13 +465,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>15</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>12</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>17</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -529,13 +481,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>16</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>13</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>18</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -550,20 +497,15 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>17</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>14</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>19</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>274</TopLine>
+      <CurrentLine>282</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Library\src\stm32f10x_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_gpio.c</FilenameWithoutPath>
@@ -571,13 +513,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>18</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>15</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>20</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -592,13 +529,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>19</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>16</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>21</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -613,13 +545,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>20</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>17</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>22</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -634,13 +561,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>21</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>18</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>23</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -655,13 +577,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>22</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>19</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>24</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -676,13 +593,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>23</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>20</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>25</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -697,13 +609,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>24</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>21</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>26</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -718,13 +625,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>25</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>22</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>27</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -739,20 +641,15 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>26</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>23</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>28</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>6</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>10</TopLine>
-      <CurrentLine>27</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\Library\src\stm32f10x_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_usart.c</FilenameWithoutPath>
@@ -760,13 +657,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
-      <FileNumber>27</FileNumber>
-=======
-      <GroupNumber>2</GroupNumber>
-      <FileNumber>24</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>29</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -789,19 +681,14 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
-<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
-      <FileNumber>28</FileNumber>
-=======
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>25</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>30</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>35</TopLine>
+      <TopLine>1</TopLine>
       <CurrentLine>45</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\stm32f10x_it.c</PathWithFileName>
@@ -810,13 +697,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
-      <FileNumber>29</FileNumber>
-=======
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>26</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>31</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -831,13 +713,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
-      <FileNumber>30</FileNumber>
-=======
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>27</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>32</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -852,27 +729,15 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
-      <FileNumber>31</FileNumber>
+      <FileNumber>33</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>8</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>64</CurrentLine>
-=======
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>28</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>18</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>14</CurrentLine>
->>>>>>> refs/remotes/origin/master
+      <TopLine>43</TopLine>
+      <CurrentLine>57</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -888,13 +753,8 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
-<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
-      <FileNumber>32</FileNumber>
-=======
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>29</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>34</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -909,13 +769,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
-      <FileNumber>33</FileNumber>
-=======
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>30</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>35</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -930,13 +785,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
-      <FileNumber>34</FileNumber>
-=======
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>31</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>36</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -951,13 +801,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
-      <FileNumber>35</FileNumber>
-=======
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>32</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>37</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -972,13 +817,8 @@
       <bShared>0</bShared>
     </File>
     <File>
-<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
-      <FileNumber>36</FileNumber>
-=======
-      <GroupNumber>4</GroupNumber>
-      <FileNumber>33</FileNumber>
->>>>>>> refs/remotes/origin/master
+      <FileNumber>38</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -1002,31 +842,4 @@
     <RteFlg>0</RteFlg>
   </Group>
 
-<<<<<<< HEAD
-=======
-  <Group>
-    <GroupName>StartUp</GroupName>
-    <tvExp>0</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
-    <File>
-      <GroupNumber>6</GroupNumber>
-      <FileNumber>34</FileNumber>
-      <FileType>2</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Library\CMSIS\StartUp\startup_stm32f10x_cl.s</PathWithFileName>
-      <FilenameWithoutPath>startup_stm32f10x_cl.s</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-  </Group>
-
->>>>>>> refs/remotes/origin/master
 </ProjectOpt>

@@ -3,6 +3,8 @@
 "..\output\mpu6050.o"
 "..\output\led.o"
 "..\output\bsp_usart.o"
+"..\output\key.o"
+"..\output\delay.o"
 "..\output\misc.o"
 "..\output\stm32f10x_adc.o"
 "..\output\stm32f10x_bkp.o"
