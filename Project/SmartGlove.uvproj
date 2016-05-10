@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\MPU6050;..\Driver\LED</IncludePath>
+              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\MPU6050;..\Driver\LED;..\Driver\Usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -424,6 +424,11 @@
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\LED\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\Usart\bsp_usart.c</FilePath>
             </File>
           </Files>
         </Group>

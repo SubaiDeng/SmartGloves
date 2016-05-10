@@ -23,6 +23,7 @@
 #include "stm32f10x.h"
 #include "MPU6050.h"
 #include "led.h"
+#include "bsp_usart.h"
 
 /**************************************************************
 *        Global Value Define Section
@@ -40,10 +41,13 @@ void DelayMs(uint32_t nTime);
 int main(void)
 {
 	SysTick_Config(SystemCoreClock/1000);  //1ms中断一次
+
 	
+	USART1_Config();//串口初始化
 	while(1)
 	{
-		
+		printf("SmartGlove Test\n");
+		DelayMs(1500);
 	}
 }
 
@@ -57,3 +61,5 @@ void DelayMs(uint32_t nTime)
     TimeDelay = nTime;
     while(TimeDelay != 0);
 }
+
+

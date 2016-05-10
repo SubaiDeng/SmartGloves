@@ -9,6 +9,9 @@
 ..\output\main.o: ..\Library\inc\stm32f10x_gpio.h
 ..\output\main.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
 ..\output\main.o: ..\Library\inc\stm32f10x_rcc.h
+..\output\main.o: ..\Library\inc\stm32f10x_usart.h
 ..\output\main.o: ..\Driver\MPU6050\MPU6050.h
 ..\output\main.o: G:\mdk474\ARM\ARMCC\bin\..\include\math.h
 ..\output\main.o: ..\Driver\LED\led.h
+..\output\main.o: ..\Driver\Usart\bsp_usart.h
+..\output\main.o: G:\mdk474\ARM\ARMCC\bin\..\include\stdio.h

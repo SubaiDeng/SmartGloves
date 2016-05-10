@@ -10,3 +10,4 @@
 ..\output\stm32f10x_wwdg.o: ..\Library\inc\stm32f10x_gpio.h
 ..\output\stm32f10x_wwdg.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
 ..\output\stm32f10x_wwdg.o: ..\Library\inc\stm32f10x_rcc.h
+..\output\stm32f10x_wwdg.o: ..\Library\inc\stm32f10x_usart.h

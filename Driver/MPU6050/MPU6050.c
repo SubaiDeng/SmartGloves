@@ -195,3 +195,8 @@ void DealWithRotation(void)
 		Axis[i] -= FinalBaseAxis[2];	//减去Z轴的(其为其重力方向的加速度)
 	}
 }
+
+/**
+ * @brief  		通过角速度来
+ * @param  		void
+ */

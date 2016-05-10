@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\MPU6050</IncludePath>
+              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\MPU6050;..\Driver\LED</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -419,6 +419,11 @@
               <FileName>MPU6050.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Driver\MPU6050\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\LED\led.c</FilePath>
             </File>
           </Files>
         </Group>

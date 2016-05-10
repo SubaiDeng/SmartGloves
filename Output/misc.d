@@ -10,3 +10,4 @@
 ..\output\misc.o: ..\Library\inc\stm32f10x_gpio.h
 ..\output\misc.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
 ..\output\misc.o: ..\Library\inc\stm32f10x_rcc.h
+..\output\misc.o: ..\Library\inc\stm32f10x_usart.h
