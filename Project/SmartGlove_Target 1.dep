@@ -325,7 +325,7 @@ I (..\Library\inc\stm32f10x_rcc.h)(0x56E4EA95)
 I (..\Library\inc\stm32f10x_usart.h)(0x56E4EA93)
 F (..\User\stm32f10x_conf.h)(0x5731D504)()
 F (..\User\stm32f10x_it.h)(0x56E4E84E)()
-F (..\User\main.c)(0x5731D607)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Library\inc -I..\Library\src -I..\User -I..\Library\CMSIS -I..\Driver\MPU6050 -I..\Driver\LED -I..\Driver\Usart-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (..\User\main.c)(0x5731D978)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Library\inc -I..\Library\src -I..\User -I..\Library\CMSIS -I..\Driver\MPU6050 -I..\Driver\LED -I..\Driver\Usart-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x532BF35C)
 I (G:\mdk474\ARM\CMSIS\Include\core_cm3.h)(0x532BF7C2)
 I (G:\mdk474\ARM\ARMCC\include\stdint.h)(0x51C7C554)
