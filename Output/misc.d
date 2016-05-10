@@ -1,0 +1,12 @@
+..\output\misc.o: ..\Library\src\misc.c
+..\output\misc.o: ..\Library\inc\misc.h
+..\output\misc.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
+..\output\misc.o: G:\mdk474\ARM\CMSIS\Include\core_cm3.h
+..\output\misc.o: G:\mdk474\ARM\ARMCC\bin\..\include\stdint.h
+..\output\misc.o: G:\mdk474\ARM\CMSIS\Include\core_cmInstr.h
+..\output\misc.o: G:\mdk474\ARM\CMSIS\Include\core_cmFunc.h
+..\output\misc.o: G:\mdk474\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
+..\output\misc.o: ..\User\stm32f10x_conf.h
+..\output\misc.o: ..\Library\inc\stm32f10x_gpio.h
+..\output\misc.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
+..\output\misc.o: ..\Library\inc\stm32f10x_rcc.h
