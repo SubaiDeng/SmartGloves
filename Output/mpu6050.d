@@ -8,7 +8,8 @@
 ..\output\mpu6050.o: G:\mdk474\ARM\CMSIS\Include\core_cmFunc.h
 ..\output\mpu6050.o: G:\mdk474\ARM\Inc\ST\STM32F10x\system_stm32f10x.h
 ..\output\mpu6050.o: ..\User\stm32f10x_conf.h
-..\output\mpu6050.o: ..\Library\inc\stm32f10x_gpio.h
+..\output\mpu6050.o: ..\Library\inc\stm32f10x_dma.h
 ..\output\mpu6050.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
+..\output\mpu6050.o: ..\Library\inc\stm32f10x_gpio.h
 ..\output\mpu6050.o: ..\Library\inc\stm32f10x_rcc.h
 ..\output\mpu6050.o: ..\Library\inc\stm32f10x_usart.h

@@ -6,7 +6,8 @@
 ..\output\system_stm32f10x.o: G:\mdk474\ARM\CMSIS\Include\core_cmFunc.h
 ..\output\system_stm32f10x.o: ..\Library\CMSIS\DeviceSupport\system_stm32f10x.h
 ..\output\system_stm32f10x.o: ..\User\stm32f10x_conf.h
-..\output\system_stm32f10x.o: ..\Library\inc\stm32f10x_gpio.h
+..\output\system_stm32f10x.o: ..\Library\inc\stm32f10x_dma.h
 ..\output\system_stm32f10x.o: G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h
+..\output\system_stm32f10x.o: ..\Library\inc\stm32f10x_gpio.h
 ..\output\system_stm32f10x.o: ..\Library\inc\stm32f10x_rcc.h
 ..\output\system_stm32f10x.o: ..\Library\inc\stm32f10x_usart.h

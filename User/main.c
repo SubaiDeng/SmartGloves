@@ -26,6 +26,7 @@
 #include "bsp_usart.h"
 #include "delay.h"
 #include "key.h"
+#include "bsp_DMA.h"
 
 /**************************************************************
 *        Global Value Define Section
@@ -46,16 +47,19 @@ void PackDatasForBlueTooth(char *data);
 **************************************************************/
 int main(void)
 {
-	SysTick_Config(SystemCoreClock/1000);  //1ms中断一次
+	SysTick_Config(SystemCoreClock / 1000);  //1ms中断一次
 	LED_Init();
-	USART1_Config();//串口初始化
+	USART1_Config();//串口1初始化
+	USART2_Config();//串口2初始化,用于发送数据
+	USART1_DMA_Config();//串口1用于DMA传输六轴模块数据		
+	USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
 	KEY_Init();
 	
 	while(1)
 	{
 		ScanKey();
-		
-		//DelayMs(1500);
+		printf("%s\n",MPU_Data);
+		DelayMs(1500);
 	}
 }
 

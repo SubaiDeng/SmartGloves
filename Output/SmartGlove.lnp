@@ -5,6 +5,7 @@
 "..\output\bsp_usart.o"
 "..\output\key.o"
 "..\output\delay.o"
+"..\output\bsp_dma.o"
 "..\output\misc.o"
 "..\output\stm32f10x_adc.o"
 "..\output\stm32f10x_bkp.o"
