@@ -29,7 +29,7 @@
 /**************************************************************
 *        Global Value Define Section
 **************************************************************/
-u8 MPU_Data [33] = {0};
+extern u8 MPU_Data [33];
 float Axis[3];
 float Angle[3];
 float Angular[3];

@@ -170,7 +170,7 @@
             <Capability>1</Capability>
             <DriverSelection>4099</DriverSelection>
           </Flash1>
-          <bUseTDR>0</bUseTDR>
+          <bUseTDR>1</bUseTDR>
           <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
@@ -362,7 +362,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS</IncludePath>
+              <IncludePath>..\Library\inc;..\Library\src;..\User;..\Library\CMSIS;..\Driver\MPU6050;..\Driver\LED;..\Driver\Usart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -403,7 +403,34 @@
       </TargetOption>
       <Groups>
         <Group>
+          <GroupName>StartUp</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_stm32f10x_cl.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\Library\CMSIS\StartUp\startup_stm32f10x_cl.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\MPU6050\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\LED\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\Usart\bsp_usart.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Library</GroupName>
@@ -582,16 +609,6 @@
         </Group>
         <Group>
           <GroupName>Doc</GroupName>
-        </Group>
-        <Group>
-          <GroupName>StartUp</GroupName>
-          <Files>
-            <File>
-              <FileName>startup_stm32f10x_cl.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\Library\CMSIS\StartUp\startup_stm32f10x_cl.s</FilePath>
-            </File>
-          </Files>
         </Group>
       </Groups>
     </Target>
