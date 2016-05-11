@@ -3,11 +3,8 @@
 "..\output\mpu6050.o"
 "..\output\led.o"
 "..\output\bsp_usart.o"
-<<<<<<< HEAD
 "..\output\key.o"
 "..\output\delay.o"
-=======
->>>>>>> refs/remotes/origin/master
 "..\output\bsp_dma.o"
 "..\output\misc.o"
 "..\output\stm32f10x_adc.o"

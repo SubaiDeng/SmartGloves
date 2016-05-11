@@ -24,11 +24,8 @@
 #include "MPU6050.h"
 #include "led.h"
 #include "bsp_usart.h"
-<<<<<<< HEAD
 #include "delay.h"
 #include "key.h"
-=======
->>>>>>> refs/remotes/origin/master
 #include "bsp_DMA.h"
 
 /**************************************************************

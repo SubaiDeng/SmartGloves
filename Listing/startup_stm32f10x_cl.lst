@@ -554,9 +554,8 @@ ARM Macro Assembler    Page 9
               00000000 
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\outpu
-t\startup_stm32f10x_cl.d -o..\output\startup_stm32f10x_cl.o -I"E:\Program Files
-\KeilMDK\ARM\RV31\INC" -I"E:\Program Files\KeilMDK\ARM\CMSIS\Include" -I"E:\Pro
-gram Files\KeilMDK\ARM\Inc\ST\STM32F10x" --predefine="__EVAL SETA 1" --predefin
+t\startup_stm32f10x_cl.d -o..\output\startup_stm32f10x_cl.o -IG:\mdk474\ARM\RV3
+1\INC -IG:\mdk474\ARM\CMSIS\Include -IG:\mdk474\ARM\Inc\ST\STM32F10x --predefin
 e="__MICROLIB SETA 1" --list=..\listing\startup_stm32f10x_cl.lst ..\Library\CMS
 IS\StartUp\startup_stm32f10x_cl.s
 
@@ -1445,4 +1444,4 @@ Symbol: __main
       At line 160 in file ..\Library\CMSIS\StartUp\startup_stm32f10x_cl.s
 Comment: __main used once
 2 symbols
-422 symbols in table
+421 symbols in table
