@@ -24,13 +24,19 @@
 #include "MPU6050.h"
 #include "led.h"
 #include "bsp_usart.h"
+<<<<<<< HEAD
 #include "delay.h"
 #include "key.h"
+=======
+>>>>>>> refs/remotes/origin/master
 #include "bsp_DMA.h"
 
 /**************************************************************
 *        Global Value Define Section
 **************************************************************/
+
+
+u8 MPU_Data [33] = {0};
 
 /**************************************************************
 *        Prototype Declare Section
@@ -54,6 +60,7 @@ int main(void)
 	USART1_DMA_Config();//串口1用于DMA传输六轴模块数据		
 	USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
 	KEY_Init();
+	
 	
 	while(1)
 	{
