@@ -1,6 +1,6 @@
 Dependencies for Project 'SmartGlove', Target 'Target 1': (DO NOT MODIFY !)
 F (..\Library\CMSIS\StartUp\startup_stm32f10x_cl.s)(0x56E4EB19)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x--list ..\listing\startup_stm32f10x_cl.lst --xref -o ..\output\startup_stm32f10x_cl.o --depend ..\output\startup_stm32f10x_cl.d)
-F (..\Driver\MPU6050\MPU6050.c)(0x57331584)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Library\inc -I..\Library\src -I..\User -I..\Library\CMSIS -I..\Driver\Delay -I..\Driver\MPU6050 -I..\Driver\LED -I..\Driver\DMA -I..\Driver\Usart -I..\Driver\KEY-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\mpu6050.o --omf_browse ..\output\mpu6050.crf --depend ..\output\mpu6050.d)
+F (..\Driver\MPU6050\MPU6050.c)(0x573410AE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Library\inc -I..\Library\src -I..\User -I..\Library\CMSIS -I..\Driver\Delay -I..\Driver\MPU6050 -I..\Driver\LED -I..\Driver\DMA -I..\Driver\Usart -I..\Driver\KEY-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\mpu6050.o --omf_browse ..\output\mpu6050.crf --depend ..\output\mpu6050.d)
 I (..\Driver\MPU6050\MPU6050.h)(0x57330E5B)
 I (G:\mdk474\ARM\ARMCC\include\math.h)(0x51C7C554)
 I (G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x532BF35C)
@@ -392,7 +392,7 @@ I (..\Library\inc\stm32f10x_rcc.h)(0x56E4EA95)
 I (..\Library\inc\stm32f10x_usart.h)(0x56E4EA93)
 F (..\User\stm32f10x_conf.h)(0x5731FC4D)()
 F (..\User\stm32f10x_it.h)(0x56E4E84E)()
-F (..\User\main.c)(0x5733161D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Library\inc -I..\Library\src -I..\User -I..\Library\CMSIS -I..\Driver\Delay -I..\Driver\MPU6050 -I..\Driver\LED -I..\Driver\DMA -I..\Driver\Usart -I..\Driver\KEY-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (..\User\main.c)(0x573410DA)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Library\inc -I..\Library\src -I..\User -I..\Library\CMSIS -I..\Driver\Delay -I..\Driver\MPU6050 -I..\Driver\LED -I..\Driver\DMA -I..\Driver\Usart -I..\Driver\KEY-I G:\mdk474\ARM\RV31\INC-I G:\mdk474\ARM\CMSIS\Include-I G:\mdk474\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (G:\mdk474\ARM\Inc\ST\STM32F10x\stm32f10x.h)(0x532BF35C)
 I (G:\mdk474\ARM\CMSIS\Include\core_cm3.h)(0x532BF7C2)
 I (G:\mdk474\ARM\ARMCC\include\stdint.h)(0x51C7C554)
