@@ -55,8 +55,8 @@ extern u8 MPU_Data [33];	//存储MPU6050数据
 extern float Axis[3];		//三个轴的加速度
 extern float Angle[3];		//三个轴的角度
 extern float Angular[3];	//三个轴的角速度
-extern char XShift;			//X轴位移
-extern char YShift;			//Y轴位移
+extern char  XShift;		//X轴位移
+extern char  YShift;		//Y轴位移
 
 /**************************************************************
 *        Prototype Declare Section

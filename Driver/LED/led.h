@@ -20,6 +20,6 @@
 *        Prototype Declare Section
 **************************************************************/
 void LED_Init(void);//初始化led
-void LED_Control(uint16_t led, u8 ledStatus);//控制led，ledStatus为1时点亮，为0时关闭
+void LED_Control(uint16_t led, u8 ledStatus);//控制led，ledStatus为ON时点亮，为OFF时关闭
 
 #endif

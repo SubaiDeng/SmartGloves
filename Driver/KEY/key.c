@@ -30,7 +30,7 @@
 *        Global Value Define Section
 **************************************************************/
 char leftKey;	//判断左键是否被按下，1为按下，0为否
-char rightKey;//判断右键是否被按下，1为按下，0为否
+char rightKey;	//判断右键是否被按下，1为按下，0为否
 
 /**************************************************************
 *	Function Define Section
@@ -46,7 +46,7 @@ void KEY_Init(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 	GPIO_InitStructure.GPIO_Pin = LEFT_KEY | RIGHT_KEY;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;	//按键下拉输入
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;	//按键上拉输入
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
@@ -56,15 +56,15 @@ void KEY_Init(void)
  */
 void ScanKey(void)
 {
-	if(IS_LEFT_KEY_DOWN)
+	if(IS_LEFT_KEY_DOWN == SET)
 	{
 		DelayMs(5);
-		leftKey = ((IS_LEFT_KEY_DOWN == RESET) ? 0 : 1);
+		leftKey = ((IS_LEFT_KEY_DOWN == SET) ? 1 : 0);
 	}
 	
-	if(IS_RIGHT_KEY_DOWN)
+	if(IS_RIGHT_KEY_DOWN == SET)
 	{
 		DelayMs(5);
-		rightKey = ((IS_RIGHT_KEY_DOWN == RESET) ? 0 : 1);
+		rightKey = ((IS_RIGHT_KEY_DOWN == SET) ? 1 : 0);
 	}
 }

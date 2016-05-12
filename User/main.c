@@ -66,15 +66,15 @@ int main(void)
 
 			GetShiftValues();
 			ScanKey();
-			PackDatasForBlueTooth(SendData);								
+			PackDatasForBlueTooth(SendData);					
 			
 			for(i = 0 ; i < 6 ; i++)
 			{
 				putchar(SendData[i]);
 			}
 			
-			DMA_ClearFlag(DMA1_FLAG_TC5);			
-		}			
+			DMA_ClearFlag(DMA1_FLAG_TC5);		
+		}	
 		DelayMs(500);		
 	}
 }
@@ -92,7 +92,7 @@ void PackDatasForBlueTooth(u8 *data)
 	*data++ = YShift;
 	*data++ = leftKey;
 	*data   = rightKey;
-	leftKey = rightKey = 0;//之前忘记清零了
+	XShift = YShift = leftKey = rightKey = 0;//之前忘记清零了
 }
 
 /**

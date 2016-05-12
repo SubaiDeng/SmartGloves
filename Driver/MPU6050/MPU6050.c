@@ -223,7 +223,7 @@ void GetShiftValues(void)
 	}
 	else
 	{
-		YShift = 0;
+		XShift = 0;
 	}
 }
 
