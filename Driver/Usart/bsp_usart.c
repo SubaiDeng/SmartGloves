@@ -84,7 +84,7 @@ void USART2_Config(void)
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
 	GPIO_Init(GPIOA,&GPIO_InitStructure);
 	
-	USART_InitStructure.USART_BaudRate = 115200;
+	USART_InitStructure.USART_BaudRate = 9600;
 	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 	USART_InitStructure.USART_Mode= USART_Mode_Rx|USART_Mode_Tx;
 	USART_InitStructure.USART_Parity = USART_Parity_No;

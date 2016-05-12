@@ -24,10 +24,10 @@ void LED_Control(uint16_t led, u8 ledStatus)
 {
 	if(ledStatus == ON)
 	{
-		GPIO_SetBits(GPIOE, led);
+		GPIO_ResetBits(GPIOE, led);
 	}
 	else
 	{
-		GPIO_ResetBits(GPIOE, led);
+		GPIO_SetBits(GPIOE, led);
 	}
 }

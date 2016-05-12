@@ -210,6 +210,8 @@ void GetShiftValues(void)
 	if(fabs(Angular[0]) < FILTER)//过滤角速度过大的值
 	{
 		YShift = (char)(Angular[0] / PROPOTION);//获取Y轴偏移
+		if(Angular[0] > 0.0001)
+			YShift = 256 - YShift;
 	}
 	else
 	{
@@ -219,7 +221,9 @@ void GetShiftValues(void)
 	/*获取X轴位移*/
 	if(fabs(Angular[2]) < FILTER)//过滤角速度过大的值
 	{
-		XShift = (char)(- (Angular[2] / PROPOTION));//获取X轴偏移
+		XShift = (char)(Angular[2] / PROPOTION);//获取X轴偏移
+		if(Angular[2] > 0.0001)
+			XShift = 256 - XShift ;
 	}
 	else
 	{

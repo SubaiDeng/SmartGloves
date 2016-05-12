@@ -60,22 +60,8 @@ int main(void)
 	
 	while(1)
 	{
-		if(DMA_GetFlagStatus(DMA1_FLAG_TC5) == SET)
-		{
-			int i = 0;
-
-			GetShiftValues();
-			ScanKey();
-			PackDatasForBlueTooth(SendData);					
-			
-			for(i = 0 ; i < 6 ; i++)
-			{
-				putchar(SendData[i]);
-			}
-			
-			DMA_ClearFlag(DMA1_FLAG_TC5);		
-		}	
-		DelayMs(500);		
+		LED_Control(LED, ON);		
+		DelayMs(10);		
 	}
 }
 
@@ -86,13 +72,18 @@ int main(void)
  */
 void PackDatasForBlueTooth(u8 *data)
 {
-	*data++ = 'a';
+	*data++ = 'a'; 
 	*data++ = 0x52;
 	*data++ = XShift;
 	*data++ = YShift;
 	*data++ = leftKey;
 	*data   = rightKey;
-	XShift = YShift = leftKey = rightKey = 0;//之前忘记清零了
+
+	/*所有值刷新为0*/
+	XShift = 0;
+	YShift = 0;
+	leftKey = 0;
+	rightKey = 0;
 }
 
 /**

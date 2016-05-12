@@ -46,7 +46,7 @@ void KEY_Init(void)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 	GPIO_InitStructure.GPIO_Pin = LEFT_KEY | RIGHT_KEY;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;	//按键上拉输入
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;	//按键下拉输入
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
