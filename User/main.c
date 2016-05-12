@@ -78,7 +78,7 @@ int main(void)
 			
 			DMA_ClearFlag(DMA1_FLAG_TC5);			
 		}			
-		DelayMs(500);		
+		DelayMs(10);		
 	}
 }
 
@@ -95,5 +95,10 @@ void PackDatasForBlueTooth(u8 *data)
 	*data++ = YShift;
 	*data++ = leftKey;
 	*data   = rightKey;
+	
+	XShift = 0;
+	YShift = 0;
+	leftKey = 0;
+	rightKey = 0;
 }
 
