@@ -19,10 +19,10 @@ void LED_Init(void)
     GPIO_Init(GPIOE, &GPIO_InitStructure);
 }
 
-//控制led，ledStatus为1时点亮，为0时关闭
+//控制led，ledStatus为ON时点亮，为OFF时关闭
 void LED_Control(uint16_t led, u8 ledStatus)
 {
-	if(ledStatus == 0)
+	if(ledStatus == ON)
 	{
 		GPIO_SetBits(GPIOE, led);
 	}

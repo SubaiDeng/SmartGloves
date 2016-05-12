@@ -13,6 +13,8 @@
 *        Macro Define Section
 **************************************************************/
 #define LED GPIO_Pin_0
+#define ON 1
+#define OFF 0
 
 /**************************************************************
 *        Prototype Declare Section

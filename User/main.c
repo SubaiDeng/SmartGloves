@@ -31,8 +31,6 @@
 /**************************************************************
 *        Global Value Define Section
 **************************************************************/
-
-
 u8 MPU_Data [33] = {0};
 
 /**************************************************************
@@ -45,24 +43,34 @@ u8 MPU_Data [33] = {0};
  */
 void PackDatasForBlueTooth(char *data);
 
+/**
+ * @brief  		初始化操作
+ * @param  		void
+ * @retval 		void
+ */
+void InitConfig(void);
+
 /**************************************************************
 *	Function Define Section
 **************************************************************/
 int main(void)
 {
-	SysTick_Config(SystemCoreClock / 1000);  //1ms中断一次
-	LED_Init();
-	USART1_Config();//串口1初始化
-	USART2_Config();//串口2初始化,用于发送数据
-	USART1_DMA_Config();//串口1用于DMA传输六轴模块数据		
-	USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
-	KEY_Init();
+	char data[6];
+	int i;
+	InitConfig();
 	
 	
 	while(1)
 	{
+		
 		ScanKey();
-		printf("%s\n",MPU_Data);
+		GetShiftValues();
+		PackDatasForBlueTooth(data);
+		for(i = 0; i < 6; ++i)
+		{
+			putchar(data[i]);
+		}
+		printf("c%s\n", MPU_Data);
 		DelayMs(1500);
 	}
 }
@@ -75,10 +83,28 @@ int main(void)
 void PackDatasForBlueTooth(char *data)
 {
 	*data++ = 'a';
-	*data++ = 'a';
+	*data++ = 0x52;
 	*data++ = XShift;
 	*data++ = YShift;
 	*data++ = leftKey;
 	*data   = rightKey;
+	leftKey = rightKey = 0;//之前忘记清零了
 }
 
+/**
+ * @brief  		初始化操作
+ * @param  		void
+ * @retval 		void
+ */
+void InitConfig(void)
+{
+	SysTick_Config(SystemCoreClock / 1000);  //1ms中断一次
+	
+	LED_Init();
+	KEY_Init();
+	
+	USART1_Config();//串口1初始化,用于接收六轴数据
+	USART2_Config();//串口2初始化,用于发送数据
+	USART1_DMA_Config();//串口1用于DMA传输六轴模块数据		
+	USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
+}

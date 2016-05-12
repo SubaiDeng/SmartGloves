@@ -79,7 +79,7 @@ void Angular_DataTransFrom(void)
 			for(j = 0; j < 3; ++j)
 				Angular[j] = ((short)(MPU_Data[3 + 2 * j + i * 11] << 8 | MPU_Data[2 + j * 2 + i * 11])) / 32768.0 * 2000;
 					
-		return;
+			return;
 					
 //			Angular[0] = ((short)(MPU_Data[3 + i * 11] << 8 | MPU_Data[2 + i * 11])) / 32768.0 * 2000;		//X轴角速度	 
 //			Angular[1] = ((short)(MPU_Data[5 + i * 11] << 8 | MPU_Data[4 + i * 11])) / 32768.0 * 2000;		//Y轴角速度
@@ -207,9 +207,9 @@ void GetShiftValues(void)
 	Angular_DataTransFrom();//获取角速度
 	
 	/*获取Y轴位移*/
-	if(fabs(Axis[0]) < FILTER)//过滤角速度过大的值
+	if(fabs(Angular[0]) < FILTER)//过滤角速度过大的值
 	{
-		YShift = Axis[0] / PROPOTION;//获取Y轴偏移
+		YShift = (char)(Angular[0] / PROPOTION);//获取Y轴偏移
 	}
 	else
 	{
@@ -217,9 +217,9 @@ void GetShiftValues(void)
 	}
 	
 	/*获取X轴位移*/
-	if(fabs(Axis[2]) < FILTER)//过滤角速度过大的值
+	if(fabs(Angular[2]) < FILTER)//过滤角速度过大的值
 	{
-		XShift = - (Axis[2] / PROPOTION);//获取X轴偏移
+		XShift = (char)(- (Angular[2] / PROPOTION));//获取X轴偏移
 	}
 	else
 	{
