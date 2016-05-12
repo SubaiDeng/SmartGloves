@@ -43,7 +43,7 @@ void USART1_Config(void)
 		GPIO_Init(GPIOA, &GPIO_InitStructure);
 			
 		/* USART1 mode config */
-		USART_InitStructure.USART_BaudRate = 9600 ;
+		USART_InitStructure.USART_BaudRate = 115200 ;
 		USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 		USART_InitStructure.USART_StopBits = USART_StopBits_1;
 		USART_InitStructure.USART_Parity = USART_Parity_No ;
@@ -91,7 +91,7 @@ void USART1_DMA_Config(void)
 		DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;	 
 
 		/*DMA模式：不断循环*/
-		//DMA_InitStructure.DMA_Mode = DMA_Mode_Normal ;
+//		DMA_InitStructure.DMA_Mode = DMA_Mode_Normal ;
 		DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;	 
 
 		/*优先级：中*/	
@@ -100,7 +100,7 @@ void USART1_DMA_Config(void)
 		/*禁止内存到内存的传输	*/
 		DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
 
-		/*配置DMA1的4通道*/		   
+		/*配置DMA1的5通道*/		   
 		DMA_Init(DMA1_Channel5, &DMA_InitStructure); 	   
 		
 		/*使能DMA*/

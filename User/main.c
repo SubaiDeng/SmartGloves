@@ -32,6 +32,7 @@
 *        Global Value Define Section
 **************************************************************/
 u8 MPU_Data [33] = {0};
+u8 SendData [6] = {0};
 
 /**************************************************************
 *        Prototype Declare Section
@@ -41,7 +42,7 @@ u8 MPU_Data [33] = {0};
  * @param  		char *data:存储待发送数据
  * @retval 		void
  */
-void PackDatasForBlueTooth(char *data);
+void PackDatasForBlueTooth(u8 *data);
 
 /**
  * @brief  		初始化操作
@@ -55,23 +56,26 @@ void InitConfig(void);
 **************************************************************/
 int main(void)
 {
-	char data[6];
-	int i;
 	InitConfig();
-	
 	
 	while(1)
 	{
-		
-		ScanKey();
-		GetShiftValues();
-		PackDatasForBlueTooth(data);
-		for(i = 0; i < 6; ++i)
+		if(DMA_GetFlagStatus(DMA1_FLAG_TC5) == SET)
 		{
-			putchar(data[i]);
-		}
-		printf("c%s\n", MPU_Data);
-		DelayMs(1500);
+			int i = 0;
+
+			GetShiftValues();
+			ScanKey();
+			PackDatasForBlueTooth(SendData);								
+			
+			for(i = 0 ; i < 6 ; i++)
+			{
+				putchar(SendData[i]);
+			}
+			
+			DMA_ClearFlag(DMA1_FLAG_TC5);			
+		}			
+		DelayMs(500);		
 	}
 }
 
@@ -80,7 +84,7 @@ int main(void)
  * @param  		char *data:存储待发送数据
  * @retval 		void
  */
-void PackDatasForBlueTooth(char *data)
+void PackDatasForBlueTooth(u8 *data)
 {
 	*data++ = 'a';
 	*data++ = 0x52;
