@@ -34,6 +34,7 @@
 
 
 u8 MPU_Data [33] = {0};
+u8 SendData [6] = {0};
 
 /**************************************************************
 *        Prototype Declare Section
@@ -43,7 +44,7 @@ u8 MPU_Data [33] = {0};
  * @param  		char *data:存储待发送数据
  * @retval 		void
  */
-void PackDatasForBlueTooth(char *data);
+void PackDatasForBlueTooth(u8 *data);
 
 /**************************************************************
 *	Function Define Section
@@ -61,9 +62,23 @@ int main(void)
 	
 	while(1)
 	{
-		ScanKey();
-		printf("%s\n",MPU_Data);
-		DelayMs(1500);
+		
+		if(DMA_GetFlagStatus(DMA1_FLAG_TC5)== SET)
+		{
+			int i = 0;
+
+			GetShiftValues();
+			ScanKey();
+			PackDatasForBlueTooth(SendData);								
+			
+			for(i = 0 ; i < 6 ; i++)
+			{
+							putchar(SendData[i]);
+			}
+			
+			DMA_ClearFlag(DMA1_FLAG_TC5);			
+		}			
+		DelayMs(500);		
 	}
 }
 
@@ -72,10 +87,10 @@ int main(void)
  * @param  		char *data:存储待发送数据
  * @retval 		void
  */
-void PackDatasForBlueTooth(char *data)
+void PackDatasForBlueTooth(u8 *data)
 {
 	*data++ = 'a';
-	*data++ = 'a';
+	*data++ = 0x52;
 	*data++ = XShift;
 	*data++ = YShift;
 	*data++ = leftKey;
