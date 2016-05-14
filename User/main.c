@@ -60,9 +60,29 @@ int main(void)
 	
 	while(1)
 	{
-		LED_Control(LED, ON);		
+		if(DMA_GetFlagStatus(DMA1_FLAG_TC5) == SET)
+		{
+			int i = 0;
+
+			GetShiftValues();
+			ScanKey();
+			PackDatasForBlueTooth(SendData);								
+			
+			for(i = 0 ; i < 6 ; i++)
+			{
+				putchar(SendData[i]);
+			}
+			
+			DMA_ClearFlag(DMA1_FLAG_TC5);			
+		}			
 		DelayMs(10);		
-	}
+	}	
+	
+//	while(1)
+//	{
+//		LED_Control(LED, ON);		
+//		DelayMs(10);		
+//	}
 }
 
 /**

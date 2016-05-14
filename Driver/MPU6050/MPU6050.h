@@ -40,7 +40,7 @@
 #define PI 3.1415926
 #define Square(x) ((x) * (x))
 #define IS_MPU_RUNNING (MPU_Data[0] == 0x55)
-#define FILTER 300.0
+#define FILTER 3000.0
 #define PROPOTION 15.0
 
 /**************************************************************
